@@ -1,0 +1,411 @@
+
+* { 
+    margin: 0px;
+    padding: 0px;  
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #EAC926;
+    width: 100vw;
+}
+
+.banner {
+    width: 100vw;
+}
+
+header nav ul li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #000;
+
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header .buscador .input {
+    background-color: #fff;
+    color: #666;
+    width:80%;
+    height: 25px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding-left: 2px;
+    margin-right:1px;
+    border-radius: 2px;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+}
+
+header .buscador .lupa  i {
+    background-color: #fff;
+    color: #666;
+    display: flex;
+    height: 25px;
+    width:20%;
+    align-items: center;
+    font-size: 10px;
+    padding:0px 5px;
+    border-radius: 2px;
+}
+
+.lupa {
+    border: none;
+    border-left: solid 1px rgb(215, 213, 213);
+    background-color: white;
+    border-radius: 2px;
+}
+
+.top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    justify-content: center;
+
+}
+
+.logo {
+    width:50%;
+    padding:10px;
+    
+}
+.buscador {
+    width:100%;
+    padding:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main section article img {
+    width:100%;
+}
+
+header p {
+    text-align: center;
+    font-size: 14px;
+
+}
+
+.titulares {
+    padding:15px;
+}
+
+header nav {
+    display: none;
+    justify-content: space-between;
+}
+
+header nav ul {
+    margin-bottom: 0px;
+    display: flex;
+    justify-content:space-around;
+    width:42%;
+}
+
+header div.burger-menu i {
+    color: white;
+    background-color: #1259c3;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 10px;
+}
+
+header div.burger-menu {
+    text-align: center;
+
+}
+
+main section .titulares {
+    font-size: 18px;
+}
+
+main section article .precios {
+    font-size: 12px;
+}
+
+main section article .descuentos {
+    font-size: 12px;
+    color: green;
+}
+
+main section article h4 {
+    font-size: 13px;
+}
+
+footer .center {
+    text-align: center;
+}
+
+footer .center .icon i {
+    color:#1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+footer .center h3 {
+    margin-bottom: 0px;
+}
+
+footer .center p {
+    margin: 0px 0px 0px
+}
+
+footer section h4 {
+    font-weight: normal;
+}
+
+main {
+    margin: 0 auto;
+    width: 90vw;
+}
+
+main section article {
+    margin-bottom: 10px;
+}
+
+main section article .info {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+
+main section article div i  {
+    width:30px;
+    height:30px;
+    border: 1px solid green;
+    border-radius: 50%;
+    padding:5px;
+    position: absolute;
+    right:20px;
+    top:-15px;
+    font-size: 16px;
+    background-color: #FFF;
+    display: block;
+
+}
+
+main section article div {
+    position: relative;
+}
+
+.desc-prod {
+    display: none;
+}
+
+#formulario-register {
+    background-color: #ebebeb;
+
+}
+
+#login-register {
+    background-color: #ebebeb;
+}
+
+.form-log {
+    display: flex;
+    flex-direction:column;
+    margin-top: 15px;
+}
+
+.formularios {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+form div {
+    margin-bottom: 5px; 
+    margin-top: 5px;
+    border-radius: 10%;
+    width: 100%;
+    max-width: 350px;
+}
+
+.log {
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    padding:5px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    max-width: none;
+}
+
+.button-login {
+    padding: 5px;
+    background-color:cornflowerblue;
+    margin-bottom: 10px;
+}
+
+.texto {
+    padding: 5px;
+}
+
+.div-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-field {
+    padding:5px;
+}
+
+.selecciones {
+    display: flex;
+}
+
+.selecciones .radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selecciones-checkbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.selecciones-checkbox div {
+    display: flex;
+    justify-content: center;
+}
+
+.foto {
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+form h3 {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.botonForm {
+    width:40%;
+}
+
+.botonSubmit {
+    background-color: green;
+    color: #fff;
+}
+
+.botonReset {
+    background-color: red;
+    color: #fff;
+}
+
+@media (min-width: 361px) {
+    .desc-prod {
+        display: block;
+    }
+    
+    .productos {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+    }
+    main section article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width:45%;
+    }
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    header nav ul {
+        font-size: 10px;
+    }
+    header nav ul li a {
+        font-size: 10px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    header p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+    header div.burger-menu {
+        display: none;
+    }
+    .top-bar {
+        flex-wrap: nowrap;
+    }
+    .logo {
+        max-width: 250px;
+    }
+    .info {
+        display: flex;
+    }
+    .info p.descuentos {
+        text-align: center;
+    }
+
+}
+
+@media (min-width:769px){
+    main section article {
+        width:22.5%;
+    }
+    header nav ul li a {
+        font-size: 14px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .top-bar{
+        justify-content: space-around;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+}
+
+main section article i {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.precios {
+    width:30%;
+}
+
+.descuentos {
+    width:70%;
+}
+
+section h4 {
+    margin-top: 20px;
+}
+
