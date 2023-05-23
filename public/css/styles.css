@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
 }
 
 header{
@@ -72,7 +73,7 @@ header .buscador .lupa  i {
 .top-bar {
     display: flex;
     flex-wrap: wrap;
-    padding: 5%;
+    padding: 3%;
     justify-content: center;
 
 }
@@ -91,6 +92,7 @@ header .buscador .lupa  i {
 }
 main section article img {
     width:100%;
+    margin-bottom: -3px;
 }
 
 header p {
@@ -146,6 +148,10 @@ main section article h4 {
     font-size: 13px;
 }
 
+footer {
+    background-color: white;
+}
+
 footer .center {
     text-align: center;
 }
@@ -155,6 +161,11 @@ footer .center .icon i {
     font-size: 2em;
     margin-bottom: 10px;
     margin-top: 50px;
+    transition: all 0.5s;
+}
+
+footer .center .icon i:hover {
+    color: green;
 }
 
 footer .center h3 {
@@ -165,8 +176,9 @@ footer .center p {
     margin: 0px 0px 0px
 }
 
-footer section h4 {
+footer div h4 {
     font-weight: normal;
+    margin-top: 40px;
 }
 
 main {
@@ -176,6 +188,7 @@ main {
 
 main section article {
     margin-bottom: 10px;
+    transition: all 0.5s;
 }
 
 main section article .info {
@@ -183,8 +196,10 @@ main section article .info {
     padding: 15px;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     width:100%;
+    background-color: white;
+    margin-top: 0px;
 }
 
 
@@ -200,6 +215,8 @@ main section article div i  {
     font-size: 16px;
     background-color: #FFF;
     display: block;
+    color: green;
+    transition: all 0.5s;
 
 }
 
@@ -209,6 +226,7 @@ main section article div {
 
 .desc-prod {
     display: none;
+    transition: all 0.5s;
 }
 
 #formulario-register {
@@ -257,8 +275,12 @@ form div {
 
 .button-login {
     padding: 5px;
+    width: 100px;
+    border: none;
+    color: white;
     background-color:cornflowerblue;
     margin-bottom: 10px;
+
 }
 
 .texto {
@@ -307,16 +329,42 @@ form h3 {
 
 .botonForm {
     width:40%;
+    padding:5px;
+    margin-bottom: 5px;
+    transition: all 0.5s;
 }
 
+
 .botonSubmit {
-    background-color: green;
+    background-color:cornflowerblue;
     color: #fff;
+    margin-right: 5px;
+    border:none;
 }
 
 .botonReset {
-    background-color: red;
+    background-color:cornflowerblue;
     color: #fff;
+    margin-left: 5px;
+    border:none;
+}
+
+.botonForm:hover {
+    border: 1px solid gray;
+    background-color: #0022AA;
+}
+
+.text-field:hover {
+    border:2px solid gray;
+}
+
+.texto:hover {
+    border:2px solid gray;
+}
+
+.button-login:hover {
+    border: 1px solid gray;
+    background-color: #0022AA;
 }
 
 @media (min-width: 361px) {
@@ -330,7 +378,7 @@ form h3 {
         justify-content: space-around;
     }
     main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    
         width:45%;
     }
     header nav {
@@ -361,7 +409,7 @@ form h3 {
         flex-wrap: nowrap;
     }
     .logo {
-        max-width: 250px;
+        max-width: 150px;
     }
     .info {
         display: flex;
@@ -389,6 +437,40 @@ form h3 {
         font-size: 12px;
     }
 
+    .logo {
+        max-width: 200px;
+    }
+
+    .desc-prod {
+        display: none;
+    }
+
+    article:hover .desc-prod {
+        display: block;
+    }
+
+    article:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    article:hover i {
+        transform:rotate(-90deg);
+    }
+    footer .adiciones {
+        display: flex;
+        justify-content: space-around;
+    }
+    footer .center .icon i {
+        font-size: 1.2rem;
+    }
+
+    footer .center h3 {
+        font-size: 14px;
+    }
+
+    footer .center p {
+        font-size: 12px;
+    }
 }
 
 main section article i {
