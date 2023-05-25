@@ -7,7 +7,7 @@ const publicPath = path.join(__dirname, "./public") // app.use(express.static('p
 app.use(express.static(publicPath))
 
 
-app.listen(3000, () => console.log("Servidor en puerto 3000 corriendo"))
+app.listen(process.env.PORT || 3000, () => console.log("Servidor en puerto 3000 corriendo"))
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/home.html"))
