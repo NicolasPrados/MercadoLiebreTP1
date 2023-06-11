@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", {title:"Login"}) %>
+
+<body>
+    
+    <%- include("./partials/header") %>
+
+    <main id="login-register">
+        <form class="form-log" action="/" method="GET">
+            <div class="log">
+                <input class="texto" type="text" name="nombreLogin" placeholder="Nombre de usuario">
+            </div>
+            <div class="log">
+                <input class="texto" type="password" name="contraseña" placeholder="Elegí tu contraseña">
+            </div>
+            <div class="button">
+                <button class="button-login" type="submit">Ingresar</button>
+            </div>
+        </form>
+    </main>
+
+    <%- include("./partials/footer") %>
+    
+</body>
+</html>
