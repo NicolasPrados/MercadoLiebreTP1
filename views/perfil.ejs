@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", {title:"Perfil Usuario"}) %>
+
+<body>
+    
+    <%- include("./partials/header") %>
+
+    <main id="login-register">
+
+        <% if (datos.perfil == "vendedor") { %>
+        
+        <form class="formPerfil" action="/user/edit/<%= datos.id %>" method="GET">
+            <h2 class="img-perfil"><%= datos.nombre %></h2>
+            <div class="div-img-perfil">
+                <img  class="imagenPerfil" src="/images/<%= datos.foto %>" alt="<%= datos.nombre %>">
+            </div>    
+            <div class="button boton-perfil">
+                <button class="button-login" type="sumbit">Editar cuenta</button>
+            </div>
+        </form>
+        <form class="form-log" action="/user/delete/<%= datos.id %>?_method=DELETE" method="POST">
+            <div class="button boton-perfil">
+                <button class="button-login" type="sumbit">Eliminar cuenta</button>
+            </div>
+        </form>
+        <form class="form-log" action="/product/create" method="GET">
+            <div class="button boton-perfil">
+                <button class="button-login" type="sumbit">Crear producto</button>
+            </div>
+        </form> 
+        <form class="form-log" action="/product/listado" method="GET">
+            <div class="button boton-perfil">
+                <button class="button-login" type="sumbit">Editar producto</button>
+            </div>
+        </form> 
+        <form class="form-log" action="/product/delete" method="GET">
+            <div class="button boton-perfil">
+                <button class="button-login" type="sumbit">Eliminar producto</button>
+            </div>
+        </form> 
+
+        <% } else { %> 
+
+            <form class="formPerfil" action="/user/edit/<%= datos.id %>" method="GET">
+                <h2 class="img-perfil"><%= datos.nombre %></h2>
+                <div class="div-img-perfil">
+                    <img  class="imagenPerfil" src="/images/<%= datos.foto %>" alt="<%= datos.nombre %>">
+                </div>    
+                <div class="button boton-perfil">
+                    <button class="button-login" type="sumbit">Editar cuenta</button>
+                </div>
+            </form>
+            <form class="form-log" action="/user/delete/<%= datos.id %>?_method=DELETE" method="POST">
+                <div class="button boton-perfil">
+                    <button  class="button-login" type="sumbit">Eliminar cuenta</button>
+                </div>
+            </form>
+            
+
+        <% } %>        
+    </main>
+
+    <%- include("./partials/footer") %>
+    
+</body>
+</html>

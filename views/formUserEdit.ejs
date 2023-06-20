@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", {title:"Edicion Usuario"}) %>
+
+<body>
+    
+    <%- include("./partials/header") %>
+
+    <main id="formulario-register">
+        <form class="formularios" action="/user/edit/<%= datosEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="div-input">
+                <input class="text-field" type="text" name="nombre" placeholder="Nombre y Apellido" value="<%= datosEdit.nombre %>">
+            </div>
+            <div class="div-input">
+                <input class="text-field" type="text" name="nombreUsuario" placeholder="Nombre de Usuario" value="<%= datosEdit.nombreUsuario %>">
+            </div>
+            <div class="div-input">
+                <input class="text-field" type="email" name="email" placeholder="E-mail" value="<%= datosEdit.email %>">
+            </div>
+            <h3>Fecha de nacimiento</h3>
+            <div class="div-input">
+                <input class="date" type="date" name="fechaNacimiento" value="1980-01-01" value="<%= datosEdit.fechaNacimiento %>">
+            </div>
+            <div class="div-input">
+                <input class="text-field" type="text" name="domicilio" placeholder="Domicilio" value="<%= datosEdit.domicilio %>">
+            </div>
+            <h3>Perfil de interes</h3>
+            <div class="selecciones">
+                <div class="radio">
+                    <input <%= datosEdit.perfil == "comprador" ? "checked" : "" %> type="radio" name="perfil" value="comprador" id="comprador"><label for="comprador">Comprador</label>
+                </div>
+                <div class="radio">
+                    <input <%= datosEdit.perfil == "vendedor" ? "checked" : "" %> type="radio" name="perfil" value="vendedor" id="vendedor"><label for="vendedor">Vendedor</label>
+                </div>
+            </div>
+            <h3>Categorias de interes</h3>
+            <div class="selecciones-checkbox">
+                <div>
+                    <input <%= datosEdit.interes.includes("electro") == true ? "checked" : "" %> type="checkbox" name="interes" value="electro" id="electro"><label for="electro">Electro</label>
+                </div>
+                <div>
+                    <input <%= datosEdit.interes.includes("moda") == true ? "checked" : "" %> type="checkbox" name="interes" value="moda" id="moda"><label for="moda">Moda</label>
+                </div>
+                <div>
+                    <input <%= datosEdit.interes.includes("hogar") == true ? "checked" : "" %> type="checkbox" name="interes" value="hogar" id="hogar"><label for="hogar">Hogar</label>
+                </div>
+                <div>
+                    <input <%= datosEdit.interes.includes("jugueteria") == true ? "checked" : "" %> type="checkbox" name="interes" value="jugueteria" id="jugueteria"><label for="jugueteria">Jugueteria</label>
+                </div>
+                <div>
+                    <input <%= datosEdit.interes.includes("vidaSana") == true ? "checked" : "" %> type="checkbox" name="interes" value="vidaSana" id="vidaSana"><label for="vidaSana">Vida sana</label>
+                </div>
+            </div>
+            <div class="div-input">
+                <label class="foto" for="foto">Cargar foto</label>
+                <input type="file" name="foto" id="foto">
+            </div>
+            
+            <div class="button bottonSolo">
+                <button class="button-login button-enviar" type ="submit">Enviar</button>
+            </div>
+        </form>
+            
+        
+    </main>
+
+    <%- include("./partials/footer") %>
+    
+</body>
+</html>

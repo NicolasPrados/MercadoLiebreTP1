@@ -242,6 +242,10 @@ main section article div {
 .form-log {
     display: flex;
     flex-direction:column;
+    
+}
+
+.formulog {
     margin-top: 15px;
 }
 
@@ -276,12 +280,16 @@ form div {
 
 .button-login {
     padding: 5px;
-    width: 100px;
+    width: 120px;
     border: none;
     color: white;
     background-color:cornflowerblue;
     margin-bottom: 10px;
 
+}
+.button-enviar {
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .texto {
@@ -366,6 +374,51 @@ form h3 {
 .button-login:hover {
     border: 1px solid gray;
     background-color: #0022AA;
+}
+.imagenPerfil {
+    height: 200px;
+    width:200px;
+}
+
+.userNoregister {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.img-perfil, .div-img-perfil {
+    text-align: center;
+    max-width: none;
+    margin: 20px 0px;
+}
+.formCreacion .div-input {
+    text-align: center;
+    max-width: none;
+    margin: 20px 0px;
+}
+
+.formCreacion .div-input .text-field {
+    font-size: 16px;
+}
+
+.but-return {
+    margin-top: 5px;
+}
+.bottonSolo {
+    margin-bottom: 20px;
+}
+.div-categorias{
+    text-align: center;
+    max-width: none;
+    display: block;
+}
+.selector {
+    width: 300px
+}
+.titulo-selector {
+    margin-bottom: 20px;
+}
+.boton-selector {
+    margin-top: 20px;
 }
 
 @media (min-width: 361px) {

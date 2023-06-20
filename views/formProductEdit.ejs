@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", {title:"Register"}) %>
+
+    <body>
+
+        <%- include("./partials/header") %>
+            <% if(miproducto.borrado==true) { %>
+                <form class="formCreacion" action="/product/edit/<%= miproducto.id %>?_method=PUT" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="div-input">
+                        <input class="text-field" type="text" name="name" placeholder="Nombre del producto"
+                            value="<%= miproducto.name %>">
+                    </div>
+
+                    <div class="div-input">
+                        <input class="text-field" type="number" name="price" placeholder="Precio del producto"
+                            value="<%= miproducto.price %>">
+                    </div>
+
+                    <div class="div-input">
+                        <input class="text-field" type="number" name="discount" placeholder="Descuento del producto"
+                            value="<%= miproducto.discount %>">
+                    </div>
+
+                    <div class="selecciones div-categorias">
+                        <div class="radio div-categorias">
+                            <input <%=miproducto.category=="in-sale" ? "checked" : "" %> type="radio" name="category"
+                            value="in-sale" id="oferta"><label for="oferta">En
+                                oferta</label>
+                        </div>
+                        <div class="radio div-categorias">
+                            <input <%=miproducto.category=="visited" ? "checked" : "" %> type="radio" name="category"
+                            value="visited" id="visitado"><label for="visitado">Visitado</label>
+                        </div>
+                    </div>
+
+                    <div class="div-input">
+                        <input class="text-field" type="text" name="description" placeholder="Descripcion del producto"
+                            value="<%= miproducto.description %>">
+                    </div>
+                    <div class="div-input">
+                        <label class="foto" for="fotoProducto">Cargar foto</label>
+                        <input type="file" name="image" id="fotoProducto">
+                    </div>
+
+                    <div class="button">
+                        <button class="button-login" type="submit">Guardar</button>
+                    </div>
+
+                </form>
+
+                <form class="formCreacion" action="/product/recover/<%= miproducto.id %>?_method=PUT" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="button">
+                        <button class="button-login" type="submit">Recuperar</button>
+                    </div>
+                </form>
+
+                <% } else { %>
+
+                    <form class="formCreacion" action="/product/edit/<%= miproducto.id %>?_method=PUT" method="POST"
+                        enctype="multipart/form-data">
+                        <div class="div-input">
+                            <input class="text-field" type="text" name="name" placeholder="Nombre del producto"
+                                value="<%= miproducto.name %>">
+                        </div>
+
+                        <div class="div-input">
+                            <input class="text-field" type="number" name="price" placeholder="Precio del producto"
+                                value="<%= miproducto.price %>">
+                        </div>
+
+                        <div class="div-input">
+                            <input class="text-field" type="number" name="discount" placeholder="Descuento del producto"
+                                value="<%= miproducto.discount %>">
+                        </div>
+
+                        <div class="selecciones div-categorias">
+                            <div class="radio div-categorias">
+                                <input <%=miproducto.category=="in-sale" ? "checked" : "" %> type="radio"
+                                name="category" value="in-sale" id="oferta"><label for="oferta">En
+                                    oferta</label>
+                            </div>
+                            <div class="radio div-categorias">
+                                <input <%=miproducto.category=="visited" ? "checked" : "" %> type="radio"
+                                name="category" value="visited" id="visitado"><label for="visitado">Visitado</label>
+                            </div>
+                        </div>
+
+                        <div class="div-input">
+                            <input class="text-field" type="text" name="description"
+                                placeholder="Descripcion del producto" value="<%= miproducto.description %>">
+                        </div>
+                        <div class="div-input">
+                            <label class="foto" for="fotoProducto">Cargar foto</label>
+                            <input type="file" name="image" id="fotoProducto">
+                        </div>
+
+                        <div class="button">
+                            <button class="button-login" type="submit">Guardar</button>
+                        </div>
+
+                    </form>
+
+                    <% } %>
+
+            <%- include("./partials/footer") %>
+
+    </body>
+
+</html>

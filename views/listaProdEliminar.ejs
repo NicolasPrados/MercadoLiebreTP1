@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", {title:"Register"}) %>
+
+<body>
+    
+    <%- include("./partials/header") %>
+
+    <main id="formulario-register">
+        <form class="formularios" action="/product/delete?_method=DELETE" method="POST">
+            <h4 class="titulo-selector">Seleccione su producto</h4>
+            <select class="selector" name="name" id="seleccion-prod">
+                <%  lista.forEach((row) => { %>
+
+                    <option value="<%= row.name %>"><%= row.name %></option>
+
+                <%  })  %>
+            </select>
+
+            <div class="button boton-perfil boton-selector">
+                <button class="button-login" type="sumbit">Eliminar producto</button>
+            </div>
+
+        </form>
+    </main>
+
+    <%- include("./partials/footer") %>
+    
+</body>
+</html>

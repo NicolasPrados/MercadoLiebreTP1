@@ -8,12 +8,12 @@
     <%- include("./partials/header") %>
 
     <main id="login-register">
-        <form class="form-log" action="/" method="GET">
+        <form class="form-log" action="/user/perfil" method="POST">
             <div class="log">
-                <input class="texto" type="text" name="nombreLogin" placeholder="Nombre de usuario">
+                <input class="texto" type="text" name="nombreUsuario" placeholder="Nombre de usuario">
             </div>
             <div class="log">
-                <input class="texto" type="password" name="contraseña" placeholder="Elegí tu contraseña">
+                <input class="texto" type="password" name="contrasenia" placeholder="Elegí tu contraseña">
             </div>
             <div class="button">
                 <button class="button-login" type="submit">Ingresar</button>

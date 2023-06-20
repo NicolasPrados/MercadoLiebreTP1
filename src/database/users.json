@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "nombre": "Nicolas Prados",
+    "nombreUsuario": "nprados",
+    "email": "nico_prados18@hotmail.com",
+    "fechaNacimiento": "1980-01-01",
+    "domicilio": "Ezpeleta 257",
+    "perfil": "vendedor",
+    "interes": [
+      "electro",
+      "jugueteria",
+      "vidaSana"
+    ],
+    "foto": "1687290385908.jpg",
+    "borrado": false,
+    "contrasenia": "pass"
+  },
+  {
+    "id": 2,
+    "nombre": "dedwdwd",
+    "nombreUsuario": "wdwdwdwd",
+    "email": "mprados@estudiantes.unsam.edu.ar",
+    "fechaNacimiento": "1980-01-01",
+    "domicilio": "wdwdw",
+    "perfil": "comprador",
+    "intereses": [
+      "moda",
+      "hogar",
+      "jugueteria"
+    ],
+    "foto": "1687273141318.jpg",
+    "contrasenia": "pass"
+  },
+  {
+    "id": 3,
+    "nombre": "Nuevo Usuario",
+    "nombreUsuario": "miUsuario",
+    "email": "mprados@estudiantes.unsam.edu.ar",
+    "fechaNacimiento": "1988-10-25",
+    "domicilio": "Sin nombre",
+    "perfil": "comprador",
+    "intereses": [
+      "electro",
+      "hogar",
+      "jugueteria"
+    ],
+    "foto": "1687300045033.jpg",
+    "contrasenia": "mipass"
+  }
+]

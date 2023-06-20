@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", {title:"Login"}) %>
+
+<body>
+    
+    <%- include("./partials/header") %>
+
+    <main id="login-register">
+        <form class="form-log formulog" action="/user/login" method="GET">
+
+            <h4 class="userNoregister">Usuario no registrado o contrasenia incorrecta</h4>
+            <div class="button">
+                <button class="button-login" type="submit">Volver</button>
+            </div>
+        </form>
+    </main>
+
+    <%- include("./partials/footer") %>
+    
+</body>
+</html>

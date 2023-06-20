@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", {title:"Creacion Producto"}) %>
+
+<body>
+    
+    <%- include("./partials/header") %>
+
+    <main>
+        <form class="formCreacion" action="/product/create" method="POST" enctype="multipart/form-data">
+        <div class="div-input">
+            <input class="text-field" type="text" name="name" placeholder="Nombre del producto">
+        </div>
+
+        <div class="div-input">
+            <input class="text-field" type="number" name="price" placeholder="Precio del producto">
+        </div>
+
+        <div class="div-input">
+            <input class="text-field" type="number" name="discount" placeholder="Descuento del producto">
+        </div>
+
+        <div class="selecciones div-categorias">
+            <div class="radio div-categorias">
+                <input type="radio" name="category" value="in-sale" id="oferta"><label for="oferta">En oferta</label>
+            </div>
+            <div class="radio div-categorias">
+                <input type="radio" name="category" value="visited" id="visitado"><label for="visitado">Visitado</label>
+            </div>
+        </div>
+
+        <div class="div-input">
+            <input class="text-field" type="text" name="description" placeholder="Descripcion del producto">
+        </div>
+        <div class="div-input">
+            <label class="foto" for="fotoProducto">Cargar foto</label>
+            <input type="file" name="image" id="fotoProducto">
+        </div>
+
+        <div class="button">
+            <button class="button-login" type="submit">Crear</button>
+        </div>
+        
+
+
+    </form>
+
+    </main>
+
+    <%- include("./partials/footer") %>
+    
+</body>
+</html>
