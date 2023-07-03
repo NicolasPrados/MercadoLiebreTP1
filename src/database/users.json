@@ -47,5 +47,20 @@
     ],
     "foto": "1687300045033.jpg",
     "contrasenia": "mipass"
+  },
+  {
+    "id": 4,
+    "nombre": "donde",
+    "nombreUsuario": "pradosddd11",
+    "email": "joaquinbb89@gmail.com",
+    "fechaNacimiento": "",
+    "domicilio": "dwdwd",
+    "perfil": "vendedor",
+    "intereses": [
+      "moda",
+      "jugueteria"
+    ],
+    "foto": "1688326807386.jpg",
+    "contrasenia": "dondeesta"
   }
 ]

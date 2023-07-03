@@ -10,55 +10,90 @@
     <main id="formulario-register">
         <form class="formularios" action="/user/register" method="POST" enctype="multipart/form-data">
             <div class="div-input">
-                <input class="text-field" type="text" name="nombre" placeholder="Nombre y Apellido">
+                <input class="text-field" type="text" name="nombre" placeholder="Nombre y Apellido" value = "<%= locals.old && old.nombre ? old.nombre : "" %>">
             </div>
+            <% if(locals.errors && errors.nombre){ %>
+                <div class="div-input input-error">
+                    <p class="error"><%= errors.nombre.msg %></p>
+                </div>
+            <% } %>
             <div class="div-input">
-                <input class="text-field" type="text" name="nombreUsuario" placeholder="Nombre de Usuario">
+                <input class="text-field" type="text" name="nombreUsuario" placeholder="Nombre de Usuario" value = "<%= locals.old && old.nombreUsuario ? old.nombreUsuario : "" %>">
             </div>
+            <% if(locals.errors && errors.nombreUsuario){ %>
+                <div class="div-input input-error">
+                    <p class="error"><%= errors.nombreUsuario.msg %></p>
+                </div>
+            <% } %>
             <div class="div-input">
-                <input class="text-field" type="email" name="email" placeholder="E-mail">
+                <input class="text-field" type="email" name="email" placeholder="E-mail" value = "<%= locals.old && old.email ? old.email : "" %>">
             </div>
+            <% if(locals.errors && errors.email){ %>
+                <div class="div-input input-error">
+                    <p class="error"><%= errors.email.msg %></p>
+                </div>
+            <% } %>
             <h3>Fecha de nacimiento</h3>
             <div class="div-input">
-                <input class="date" type="date" name="fechaNacimiento" value="1980-01-01">
+                <input class="date" type="date" name="fechaNacimiento" value="">
             </div>
             <div class="div-input">
-                <input class="text-field" type="text" name="domicilio" placeholder="Domicilio">
+                <input class="text-field" type="text" name="domicilio" placeholder="Domicilio" value = "<%= locals.old && old.domicilio ? old.domicilio : "" %>">
             </div>
+            <% if(locals.errors && errors.domicilio){ %>
+                <div class="div-input input-error">
+                    <p class="error"><%= errors.domicilio.msg %></p>
+                </div>
+            <% } %>
             <h3>Perfil de interes</h3>
             <div class="selecciones">
                 <div class="radio">
-                    <input type="radio" name="perfil" value="comprador" id="comprador"><label for="comprador">Comprador</label>
+                    <input type="radio" name="perfil" value= "comprador" <%= locals.old && old.perfil == "comprador" ? "checked" : "" %> id="comprador"><label for="comprador">Comprador</label>
                 </div>
                 <div class="radio">
-                    <input type="radio" name="perfil" value="vendedor" id="vendedor"><label for="vendedor">Vendedor</label>
+                    <input type="radio" name="perfil" value= "vendedor" <%= locals.old && old.perfil == "vendedor" ? "checked" : "" %> id="vendedor"><label for="vendedor">Vendedor</label>
                 </div>
             </div>
+            <% if(locals.errors && errors.perfil){ %>
+                <div class="div-input input-error">
+                    <p class="error"><%= errors.perfil.msg %></p>
+                </div>
+            <% } %>
             <h3>Categorias de interes</h3>
             <div class="selecciones-checkbox">
                 <div>
-                    <input type="checkbox" name="interes" value="electro" id="electro"><label for="electro">Electro</label>
+                    <input <%= locals.old && old.interes.includes("electro") ? "checked" : "" %> type="checkbox" name="interes" value="electro" id="electro"><label for="electro">Electro</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="interes" value="moda" id="moda"><label for="moda">Moda</label>
+                    <input <%= locals.old && old.interes.includes("moda") ? "checked" : "" %> type="checkbox" name="interes" value="moda" id="moda"><label for="moda">Moda</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="interes" value="hogar" id="hogar"><label for="hogar">Hogar</label>
+                    <input <%= locals.old && old.interes.includes("hogar") ? "checked" : "" %> type="checkbox" name="interes" value="hogar" id="hogar"><label for="hogar">Hogar</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="interes" value="jugueteria" id="jugueteria"><label for="jugueteria">Jugueteria</label>
+                    <input <%= locals.old && old.interes.includes("jugueteria") ? "checked" : "" %> type="checkbox" name="interes" value="jugueteria" id="jugueteria"><label for="jugueteria">Jugueteria</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="interes" value="vidaSana" id="vidaSana"><label for="vidaSana">Vida sana</label>
+                    <input <%= locals.old && old.interes.includes("vidaSana") ? "checked" : "" %> type="checkbox" name="interes" value="vidaSana" id="vidaSana"><label for="vidaSana">Vida sana</label>
                 </div>
             </div>
             <div class="div-input">
                 <label class="foto" for="foto">Cargar foto</label>
                 <input type="file" name="foto" id="foto">
             </div>
+            <% if(locals.errors && errors.foto){ %>
+                <div class="div-input input-error">
+                    <p class="error"><%= errors.foto.msg %></p>
+                </div>
+            <% } %>
             <div class="div-input">
                 <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
             </div>
+            <% if(locals.errors && errors.password){ %>
+                <div class="div-input input-error">
+                    <p class="error"><%= errors.password.msg %></p>
+                </div>
+            <% } %>
             <div class="div-input">
                 <input class="text-field" type="password" name="confirmarcontrasenia" placeholder="Confirmar Contraseña">
             </div>

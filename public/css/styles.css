@@ -420,6 +420,16 @@ form h3 {
 .boton-selector {
     margin-top: 20px;
 }
+.error {
+    font-size: 10px;
+    color: red;
+    text-align: left;
+    width:170px;
+}
+.input-error {
+
+    margin-top: 5px;
+}
 
 @media (min-width: 361px) {
     .desc-prod {
