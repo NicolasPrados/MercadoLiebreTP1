@@ -18,49 +18,17 @@
   },
   {
     "id": 2,
-    "nombre": "dedwdwd",
-    "nombreUsuario": "wdwdwdwd",
-    "email": "mprados@estudiantes.unsam.edu.ar",
-    "fechaNacimiento": "1980-01-01",
-    "domicilio": "wdwdw",
-    "perfil": "comprador",
-    "intereses": [
-      "moda",
-      "hogar",
-      "jugueteria"
-    ],
-    "foto": "1687273141318.jpg",
-    "contrasenia": "pass"
-  },
-  {
-    "id": 3,
-    "nombre": "Nuevo Usuario",
-    "nombreUsuario": "miUsuario",
-    "email": "mprados@estudiantes.unsam.edu.ar",
-    "fechaNacimiento": "1988-10-25",
-    "domicilio": "Sin nombre",
-    "perfil": "comprador",
-    "intereses": [
-      "electro",
-      "hogar",
-      "jugueteria"
-    ],
-    "foto": "1687300045033.jpg",
-    "contrasenia": "mipass"
-  },
-  {
-    "id": 4,
-    "nombre": "donde",
-    "nombreUsuario": "pradosddd11",
-    "email": "joaquinbb89@gmail.com",
+    "nombre": "Nicolas",
+    "nombreUsuario": "nicoprados",
+    "email": "nnn@hotmail.com",
     "fechaNacimiento": "",
-    "domicilio": "dwdwd",
+    "domicilio": "un12sos",
     "perfil": "vendedor",
     "intereses": [
-      "moda",
-      "jugueteria"
+      "electro",
+      "hogar"
     ],
-    "foto": "1688326807386.jpg",
-    "contrasenia": "dondeesta"
+    "foto": "1688518163461.jpg",
+    "contrasenia": "$2a$10$.mYXxd8dfJxhyhyI0oqGYOZf1HvCg1wHOOWbJ4J8ApTQGXJkSUKkW"
   }
 ]

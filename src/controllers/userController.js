@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require ("path");
 const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs")
 
 const usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../database/users.json")));
 
@@ -9,7 +10,6 @@ module.exports = {
     login: (req, res) => {
         return res.render("login");
     },
-
     register: (req, res) => {
         return res.render("register");
     },
@@ -31,7 +31,7 @@ module.exports = {
             "perfil": req.body.perfil,
             "intereses": req.body.interes,
             "foto": req.file.filename,
-            "contrasenia": req.body.contrasenia
+            "contrasenia": bcrypt.hashSync(req.body.contrasenia, 10)
         }
 
         fs.writeFileSync(path.resolve(__dirname,"../database/users.json"), JSON.stringify([...usuarios, usuarioNuevo],null, 2),"utf-8")
@@ -39,9 +39,17 @@ module.exports = {
 
        }
     },
-    perfil: (req, res) => {
-        
+    perfilLogin: (req, res) => {
+          
         const usuarioPerfil = usuarios.find(row => row.nombreUsuario == req.body.nombreUsuario)
+
+        if(usuarioPerfil && usuarioPerfil.borrado) {
+            if(bcrypt.compareSync(req.body.contrasenia, usuarioPerfil.contrasenia)) {
+                
+            }
+        }
+
+
         if(usuarioPerfil && usuarioPerfil.borrado == false && usuarioPerfil.contrasenia == req.body.contrasenia) {
             return res.render("perfil", {datos:usuarioPerfil})
         } else {
@@ -83,6 +91,11 @@ module.exports = {
         fs.writeFileSync(path.resolve(__dirname,"../database/users.json"), JSON.stringify(usuarios,null, 2),"utf-8")
         res.redirect("/")
     },
-   
+    passwordChange: (req, res) => {
+
+    },
+    passwordChangeProcess: (req, res) => {
+
+    }
 
 }

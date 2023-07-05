@@ -11,7 +11,7 @@ const authMiddleware = require("../middlewares/authMiddleware")
 
 // HOMES
 router.get("/login", controller.login) //terminado
-router.post("/perfil", controller.perfil) //ir al perfil // terminado
+router.post("/perfil", controller.perfilLogin) //ir al perfil // proceso de login
 // USER REGISTER    
 router.get("/register", controller.register)
 router.post("/register",fileUpload.single("foto"), validationRegister, controller.processRegister)
@@ -19,6 +19,10 @@ router.post("/register",fileUpload.single("foto"), validationRegister, controlle
 // USER EDIT
 router.get("/edit/:id", controller.perfilEdit) //ver los datos del perfil para editar // terminado
 router.put("/edit/:id",fileUpload.single("foto"), controller.perfilEditProcess) //terminado
+
+//PASSWORD EDIT
+router.get("/changepassword", controller.passwordChange)
+router.put("/changepassword", controller.passwordChangeProcess)
 
 // USER DELETE
 router.delete("/delete/:id", controller.deleteProcess) // terminado

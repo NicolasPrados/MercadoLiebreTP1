@@ -62,19 +62,19 @@
             <h3>Categorias de interes</h3>
             <div class="selecciones-checkbox">
                 <div>
-                    <input <%= locals.old && old.interes.includes("electro") ? "checked" : "" %> type="checkbox" name="interes" value="electro" id="electro"><label for="electro">Electro</label>
+                    <input <%= locals.old && old.interes == undefined ? "" : locals.old && old.interes.includes("electro") ? "checked" : "" %> type="checkbox" name="interes" value="electro" id="electro"><label for="electro">Electro</label>
                 </div>
                 <div>
-                    <input <%= locals.old && old.interes.includes("moda") ? "checked" : "" %> type="checkbox" name="interes" value="moda" id="moda"><label for="moda">Moda</label>
+                    <input <%= locals.old && old.interes == undefined ? "" : locals.old && old.interes.includes("moda") ? "checked" : "" %> type="checkbox" name="interes" value="moda" id="moda"><label for="moda">Moda</label>
                 </div>
                 <div>
-                    <input <%= locals.old && old.interes.includes("hogar") ? "checked" : "" %> type="checkbox" name="interes" value="hogar" id="hogar"><label for="hogar">Hogar</label>
+                    <input <%= locals.old && old.interes == undefined ? "" : locals.old && old.interes.includes("hogar") ? "checked" : "" %> type="checkbox" name="interes" value="hogar" id="hogar"><label for="hogar">Hogar</label>
                 </div>
                 <div>
-                    <input <%= locals.old && old.interes.includes("jugueteria") ? "checked" : "" %> type="checkbox" name="interes" value="jugueteria" id="jugueteria"><label for="jugueteria">Jugueteria</label>
+                    <input <%= locals.old && old.interes == undefined ? "" : locals.old && old.interes.includes("jugueteria") ? "checked" : "" %> type="checkbox" name="interes" value="jugueteria" id="jugueteria"><label for="jugueteria">Jugueteria</label>
                 </div>
                 <div>
-                    <input <%= locals.old && old.interes.includes("vidaSana") ? "checked" : "" %> type="checkbox" name="interes" value="vidaSana" id="vidaSana"><label for="vidaSana">Vida sana</label>
+                    <input <%= locals.old && old.interes == undefined ? "" : locals.old && old.interes.includes("vidaSana") ? "checked" : "" %> type="checkbox" name="interes" value="vidaSana" id="vidaSana"><label for="vidaSana">Vida sana</label>
                 </div>
             </div>
             <div class="div-input">
@@ -89,14 +89,19 @@
             <div class="div-input">
                 <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
             </div>
-            <% if(locals.errors && errors.password){ %>
+            <% if(locals.errors && errors.contrasenia){ %>
                 <div class="div-input input-error">
-                    <p class="error"><%= errors.password.msg %></p>
+                    <p class="error"><%= errors.contrasenia.msg %></p>
                 </div>
             <% } %>
             <div class="div-input">
                 <input class="text-field" type="password" name="confirmarcontrasenia" placeholder="Confirmar Contraseña">
             </div>
+            <% if(locals.errors && errors.confirmarcontrasenia){ %>
+                <div class="div-input input-error">
+                    <p class="error"><%= errors.confirmarcontrasenia.msg %></p>
+                </div>
+            <% } %>
             <div class="div-input botones">
                 <button class="botonForm botonSubmit" type="submit">Enviar</button>
                 <button class="botonForm botonReset" type="reset">Borrar</button>

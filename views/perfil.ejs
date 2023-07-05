@@ -20,6 +20,11 @@
                 <button class="button-login" type="sumbit">Editar cuenta</button>
             </div>
         </form>
+        <form class="form-log" action="/user/changepass" method="GET">
+            <div class="button boton-perfil">
+                <button  class="button-login" type="sumbit">Cambiar contraseña</button>
+            </div>
+        </form>
         <form class="form-log" action="/user/delete/<%= datos.id %>?_method=DELETE" method="POST">
             <div class="button boton-perfil">
                 <button class="button-login" type="sumbit">Eliminar cuenta</button>
@@ -40,6 +45,7 @@
                 <button class="button-login" type="sumbit">Eliminar producto</button>
             </div>
         </form> 
+        
 
         <% } else { %> 
 
@@ -57,6 +63,7 @@
                     <button  class="button-login" type="sumbit">Eliminar cuenta</button>
                 </div>
             </form>
+            
             
 
         <% } %>        
