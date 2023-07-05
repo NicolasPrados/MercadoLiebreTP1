@@ -430,6 +430,10 @@ form h3 {
 
     margin-top: 5px;
 }
+.recordame {
+    font-size: 14px;
+    margin-left: 5px;
+}
 
 @media (min-width: 361px) {
     .desc-prod {

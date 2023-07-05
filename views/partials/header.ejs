@@ -18,8 +18,14 @@
                 <li><a href="#">Ayuda</a></li>
             </ul>
             <ul class="right-nav">
+            <% if(locals.estaLoggeado) { %>
+
+                <li><a href="/user/perfil">Mi perfil</a></li>
+                <li><a href="/user/logout">Logout</a></li>
+            <% } else { %>
                 <li><a href="/user/register">Creá tu cuenta</a><i class="far fa-id-card"></i></li>
-                <li><a href="/user/login">Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="/user/login">Ingresá</a><i class="fas fa-sign-in-alt"></i></li> 
+            <% } %>
                 <li><a href="#">Mis Compras</a><i class="fas fa-shopping-basket"></i></li>
             </ul>
         </nav>

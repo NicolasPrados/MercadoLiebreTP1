@@ -10,10 +10,11 @@ const guestMiddleware = require("../middlewares/guestMiddleware")
 const authMiddleware = require("../middlewares/authMiddleware")
 
 // HOMES
-router.get("/login", controller.login) //terminado
+router.get("/login", guestMiddleware, controller.login) //terminado
+router.get("/perfil", authMiddleware, controller.detallePerfil)
 router.post("/perfil", controller.perfilLogin) //ir al perfil // proceso de login
 // USER REGISTER    
-router.get("/register", controller.register)
+router.get("/register", guestMiddleware, controller.register)
 router.post("/register",fileUpload.single("foto"), validationRegister, controller.processRegister)
 
 // USER EDIT
@@ -26,5 +27,8 @@ router.put("/changepassword", controller.passwordChangeProcess)
 
 // USER DELETE
 router.delete("/delete/:id", controller.deleteProcess) // terminado
+
+//LOG OUT
+router.get("/logout", controller.logout)
 
 module.exports = router
