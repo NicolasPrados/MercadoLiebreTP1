@@ -434,6 +434,10 @@ form h3 {
     font-size: 14px;
     margin-left: 5px;
 }
+.errorPass {
+    max-width: none;
+}
+
 
 @media (min-width: 361px) {
     .desc-prod {

@@ -20,7 +20,7 @@
     "id": 2,
     "nombre": "Nicolas",
     "nombreUsuario": "nicoprados",
-    "email": "nnn@hotmail.com",
+    "email": "nico@hotmail.com",
     "fechaNacimiento": "",
     "domicilio": "un12sos",
     "perfil": "vendedor",
@@ -29,6 +29,22 @@
       "hogar"
     ],
     "foto": "1688518163461.jpg",
-    "contrasenia": "$2a$10$.mYXxd8dfJxhyhyI0oqGYOZf1HvCg1wHOOWbJ4J8ApTQGXJkSUKkW"
+    "contrasenia": "$2a$10$bt5N3PkpJqbXhL8vBhakK.L7GKfJMH4rO9dmFLylUul8z2uo7CAIi"
+  },
+  {
+    "id": 3,
+    "nombre": "amigos",
+    "nombreUsuario": "nicopradosddd",
+    "email": "aaa@hotmail.com",
+    "fechaNacimiento": "2011-02-08",
+    "domicilio": "casas",
+    "perfil": "comprador",
+    "intereses": [
+      "hogar",
+      "jugueteria",
+      "vidaSana"
+    ],
+    "foto": "1688705471896.jpg",
+    "contrasenia": "$2a$10$PvCef0BkTlB5c0AHvnZMMuzu.3SFT3J/QYmPQSWedkVBtnPCXtpsC"
   }
 ]

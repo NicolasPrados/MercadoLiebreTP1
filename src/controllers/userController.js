@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs")
 
 
 const usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/users.json")));
+const usuarioCambiarPass = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/passwords.json")));
 
 module.exports = {
 
@@ -38,11 +39,10 @@ module.exports = {
 
             fs.writeFileSync(path.resolve(__dirname, "../database/users.json"), JSON.stringify([...usuarios, usuarioNuevo], null, 2), "utf-8")
             res.redirect("/")
-
         }
     },
     detallePerfil: (req, res) => {
-        return res.render("perfil", {datos:req.session.usuarioLoggeado});
+        return res.render("perfil", { datos: req.session.usuarioLoggeado });
     },
 
     perfilLogin: (req, res) => {
@@ -55,20 +55,16 @@ module.exports = {
 
                 /*delete*/ usuarioPerfil.contrasenia // borro la contraseña del usuario en la sesion por seguridad. Consultar por el delete, que no me encuentra pass
 
-                req.session.usuarioLoggeado = usuarioPerfil 
+                req.session.usuarioLoggeado = usuarioPerfil
 
-                if(req.body.recordame) {
-                    res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 2})
+                if (req.body.recordame) {
+                    res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2 })
                 }
 
-                return res.render("perfil", {datos: req.session.usuarioLoggeado})
-                
+                return res.redirect("/user/perfil")
             }
-
         }
-        
         return res.render("mensajeSinPerfil")
-
     },
     perfilEdit: (req, res) => {
         const usuarioPerfil = usuarios.find(row => row.id == req.params.id)
@@ -105,9 +101,27 @@ module.exports = {
         res.redirect("/")
     },
     passwordChange: (req, res) => {
-
+        const usuarioCambiarPass = req.session.usuarioLoggeado
+        
+        return res.render("changePassword", {usuario: usuarioCambiarPass})
     },
     passwordChangeProcess: (req, res) => {
+
+
+        const datosUsuarioPass = usuarios.find(row => row.nombreUsuario == req.session.usuarioLoggeado.nombreUsuario)
+
+        const usuarioPassVieja = {
+            "nombreUsuario": req.session.usuarioLoggeado.nombreUsuario,
+            "contrasenia": req.session.usuarioLoggeado.contrasenia
+        }
+
+        fs.writeFileSync(path.resolve(__dirname, "../database/passwords.json"), JSON.stringify([...usuarioCambiarPass, usuarioPassVieja], null, 2), "utf-8")
+
+        datosUsuarioPass.contrasenia = bcrypt.hashSync(req.body.contraseniaNueva, 10)
+
+        fs.writeFileSync(path.resolve(__dirname, "../database/users.json"), JSON.stringify(usuarios, null, 2), "utf-8")
+        res.redirect("/")
+
 
     },
     logout: (req, res) => {
