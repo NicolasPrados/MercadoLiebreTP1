@@ -46,5 +46,35 @@
     ],
     "foto": "1688705471896.jpg",
     "contrasenia": "$2a$10$PvCef0BkTlB5c0AHvnZMMuzu.3SFT3J/QYmPQSWedkVBtnPCXtpsC"
+  },
+  {
+    "id": 4,
+    "nombre": "Amigos",
+    "nombreUsuario": "ddddd",
+    "email": "doe@mmm.com",
+    "fechaNacimiento": "2023-07-25",
+    "domicilio": "Ezpeleta 257",
+    "perfil": "vendedor",
+    "intereses": [
+      "hogar",
+      "vidaSana"
+    ],
+    "foto": "1689038977369.jpg",
+    "contrasenia": "$2a$10$FQ2p3zE2I01qNpDwjrqfz.ecJgybPwUQPutQT5tlwfR4.aMoAJv9q"
+  },
+  {
+    "id": 5,
+    "nombre": "nicolas",
+    "nombreUsuario": "Nicolas",
+    "email": "aaaa@hotmail.com",
+    "fechaNacimiento": "1998-03-12",
+    "domicilio": "dddddd",
+    "perfil": "vendedor",
+    "intereses": [
+      "electro",
+      "hogar"
+    ],
+    "foto": "1689216490692.jpg",
+    "contrasenia": "$2a$10$OfO7.c01Me/psZpK93ANMOCPsJB5la326GZSPog1HUyu2Wf.NUumm"
   }
 ]

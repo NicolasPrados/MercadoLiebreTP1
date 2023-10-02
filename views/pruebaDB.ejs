@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", {title:"pruebaDB"}) %>
+
+<body>
+    
+    <%- include("./partials/header") %>
+
+    <main id="formulario-register">
+
+    
+        <h1>LISTADO DE ALBUMES</h1>
+        <ul>
+            <% for( let i = 0; i < album.length; i++ ) { %>
+            <li>
+                <a href="/product/albums/<%= album[i].id %>"><%= album[i].titulo %></a>
+            </li>
+            <% } %>
+        </ul>
+
+    </main>
+
+    <%- include("./partials/footer") %>
+    
+</body>
+</html>

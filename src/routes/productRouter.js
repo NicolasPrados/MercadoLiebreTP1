@@ -4,6 +4,8 @@ const path = require("path")
 const multer = require("multer")
 const controller = require("../controllers/productController")
 
+const albumController = require("../controllers/albumController")
+
 const fileUpload = require('../middlewares/multerMiddleware');
 
 router.get("/create", controller.create)
@@ -17,5 +19,8 @@ router.put("/recover/:id", controller.prodRecover)
 
 router.get("/delete", controller.listaProdEliminar)
 router.delete("/delete", controller.procesoProdEliminar)
+
+// PRUEBA DB
+router.get("/albums", albumController.list)
 
 module.exports = router
