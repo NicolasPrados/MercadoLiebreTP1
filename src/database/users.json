@@ -76,5 +76,21 @@
     ],
     "foto": "1689216490692.jpg",
     "contrasenia": "$2a$10$OfO7.c01Me/psZpK93ANMOCPsJB5la326GZSPog1HUyu2Wf.NUumm"
+  },
+  {
+    "id": 6,
+    "nombre": "Amigos",
+    "nombreUsuario": "Mi_cuenta",
+    "email": "miultimacuenta@hotmail.com",
+    "fechaNacimiento": "2022-12-13",
+    "domicilio": "wwdwd",
+    "perfil": "vendedor",
+    "intereses": [
+      "jugueteria",
+      "vidaSana"
+    ],
+    "foto": "1696288177594.jpg",
+    "contrasenia": "$2a$10$rRAlSFMaRCPMr9OJJ6ZvFeFQEVyRZzH3MKo3c.TbuQHhmmTPShsjC",
+    "borrado": true
   }
 ]
